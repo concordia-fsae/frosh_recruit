@@ -1,0 +1,52 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+
+    <!-- Page css -->
+    <link rel="stylesheet" href="{% static 'css/page_submitted.css' %}">
+
+    <title>Concordia SAE Recruitment Form</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+    <!-- Redirect back to the beginning after 2 seconds -->
+    <script>
+        setTimeout("location.href = '/';", 2000);
+    </script>
+  </body>
+
+  <nav class="navbar navbar-expand-md">
+    <img class="navbar-brand" src="{% static 'logo.png' %}">
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Start over</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header header container-fluid">
+    <div class="container overlay">
+      <div class="prompt text-center">
+          <h4>Thank you!</h4>
+          <h5>Your information has been recorded. We'll be in touch soon!</h5>
+      </div>
+    </div>
+  </header>
+
+</html>

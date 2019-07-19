@@ -1,0 +1,64 @@
+body {
+    background-color: #800020
+}
+
+body:after {
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+    background-color: #D4AF37;
+    content:"";
+}
+
+.navbar {
+    background:#FFFFFF;
+}
+.nav-link,
+.navbar-brand {
+    color: #000000;
+    cursor: pointer;
+    max-width: 200px;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: #D4AF37;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 50%;
+    min-width: 20%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 1em;
+}
+
+.overlay h3 {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.prompt{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.prompt h4{
+    font-weight: 600;
+    font-size: x-large;
+}
+.prompt h5{
+    font-weight: 600;
+    font-size: medium;
+}

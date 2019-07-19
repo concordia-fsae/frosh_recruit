@@ -1,0 +1,112 @@
+body {
+    background-color: #800020
+}
+
+body:after {
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+    background-color: #D4AF37;
+    content:"";
+}
+
+.navbar {
+    background:#FFFFFF;
+}
+.navbar-brand {
+    color: #000000;
+    max-width: 200px;
+}
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        max-width: 150px;
+    }
+}
+.nav-link {
+    color: #000000;
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: #D4AF37;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+.overlay {
+    position: absolute;
+    /* min-height: 50%; */
+    min-width: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 1em;
+}
+
+
+@media (max-width: 575.98px) {
+    .overlay {
+        position: absolute;
+        margin-top: 6em;
+        min-width: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #FFFFFF;
+        border-radius: 1em;
+    }
+}
+
+
+
+.overlay h3,
+.program_label{
+    font-size: medium;
+    font-weight: 600;
+}
+
+
+.prompt{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+.prompt h4{
+    font-weight: 600;
+    font-size: x-large;
+}
+.prompt h5{
+    font-weight: 600;
+    font-size: medium;
+}
+
+.survey {
+    /* margin: 1em auto; */
+    padding: 1em;
+    position: relative;
+}
+
+.survey input {
+    border-radius: 0;
+}
+
+.survey .btn {
+    background-color: #800020;
+    color: #fff;
+    margin-top: 20px;
+}
+.survey .btn:hover{
+    background-color: #60002A
+}
+
+.program{
+    margin-top: 1em;
+}
+
+.other{
+    margin-bottom: 1em;
+}

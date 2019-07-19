@@ -1,0 +1,109 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+
+    <!-- Page css -->
+    <link rel="stylesheet" href="{% static 'css/page_form.css' %}">
+
+    <title>Concordia SAE Recruitment Form</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+    <script src="{% static 'js/page_form.js' %}"></script>
+  </body>
+
+  <nav class="navbar navbar-expand-md">
+    <img class="navbar-brand" src="{% static 'logo.png' %}">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="">Restart</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header header container-fluid">
+    <div class="overlay">
+      <div class="prompt">
+          <h4>Interested?</h4>
+          <h5>Give us your info and we'll be in touch!</h5>
+      </div>
+      <form action="{% url 'recruit_app:submit' %}" method="post" class="needs-validation survey" novalidate> {% csrf_token %}
+        <h3>* Contact Information:</h3>
+        <div class="form-row">
+          <div class="col-6">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email Address" name="email" required>
+        </div>
+        <div class="interests">
+          <h3>What team(s) are you interested in?</h3>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" value="1" name="interests">
+            <label class="form-check-label" for="aero">Aero</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" value="2" name="interests">
+              <label class="form-check-label" for="baja">Baja</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" value="4" name="interests">
+              <label class="form-check-label" for="fsae">Formula Combustion</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" value="8" name="interests">
+              <label class="form-check-label" for="efsae">Formula Electric</label>
+          </div>
+        </div>
+        <div class="program">
+            <div class="form-group">
+                <label class="program_label" for="programSelect">* Program</label>
+                <select class="form-control" id="programSelect" name="program" required>
+                  <option value="">Please select a program</option>
+                  <option value="mech">Mechanical Engineering</option>
+                  <option value="elec">Electrical Engineering</option>
+                  <option value="coen">Computer Engineering</option>
+                  <option value="indu">Industrial Engineering</option>
+                  <option value="beng">Building Engineering</option>
+                  <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="other">
+              <input type="text" class="form-control" placeholder="Program" id="program_other" name="other" hidden>
+            </div>
+        </div>
+        <div class="deg_year">
+          <h3>* What year are you?</h3>
+          <input type="number" class="form-control" id="year" name="year" min=0 max=5 required>
+        </div>
+        <input type="submit" class="btn btn-secondary btn-block" value="Submit">
+        </form>
+      </div>
+    </div>
+  </header>
+
+</html>
